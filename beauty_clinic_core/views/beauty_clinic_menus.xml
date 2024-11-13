@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="menu_beauty_clinic_root" name="Beauty Clinic" sequence="10"/>
+    <menuitem id="menu_beauty_clinic_appointments" name="Appointments" parent="menu_beauty_clinic_root" sequence="10" action="action_beauty_clinic_appointment"/>
+    
+    <record id="action_beauty_clinic_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">beauty.clinic.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

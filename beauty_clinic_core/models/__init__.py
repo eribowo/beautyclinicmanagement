@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import models
+# models/__init__.py
+from . import beauty_appointment
+

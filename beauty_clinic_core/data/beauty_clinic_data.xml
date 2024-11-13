@@ -1,0 +1,9 @@
+<odoo>
+    <record id="sequence_beauty_clinic_appointment" model="ir.sequence">
+        <field name="name">Beauty Clinic Appointment</field>
+        <field name="code">beauty.clinic.appointment</field>
+        <field name="prefix">BCAPT</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+    </record>
+</odoo>
