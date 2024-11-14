@@ -6,9 +6,20 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- Action untuk Patients -->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('customer_rank', '>', 0)]</field> <!-- Filter hanya customer -->
+    </record>
+
     <!-- Menu Utama untuk Beauty Clinic -->
     <menuitem id="menu_beauty_clinic_root" name="Beauty Clinic" sequence="10"/>
     
     <!-- Menu untuk Appointments -->
     <menuitem id="menu_beauty_clinic_appointments" name="Appointments" parent="menu_beauty_clinic_root" sequence="10" action="action_beauty_clinic_appointment"/>
+    
+    <!-- Menu untuk Patients -->
+    <menuitem id="menu_patient" name="Patients" parent="menu_beauty_clinic_root" sequence="20" action="action_patient"/>
 </odoo>
