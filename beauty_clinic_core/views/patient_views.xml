@@ -2,33 +2,22 @@
     <record id="view_patient_form" model="ir.ui.view">
         <field name="name">Patient Form</field>
         <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <form string="Patient">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="phone"/>
-                        <field name="email"/>
-                        <field name="street"/>
-                        <field name="city"/>
-                        <field name="state_id"/>
-                        <field name="country_id"/>
-                    </group>
-                </sheet>
-            </form>
+            <xpath expr="//field[@name='function']" position="before">
+                <field name="status" widget="radio" options="{'horizontal': true}" string="Status"/>
+            </xpath>
         </field>
     </record>
 
     <record id="view_patient_tree" model="ir.ui.view">
         <field name="name">Patient Tree</field>
         <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
-            <tree string="Patients">
-                <field name="name"/>
-                <field name="phone"/>
-                <field name="email"/>
-                <field name="city"/>
-            </tree>
+            <xpath expr="//tree" position="inside">
+                <field name="status"/>
+            </xpath>
         </field>
     </record>
 </odoo>
