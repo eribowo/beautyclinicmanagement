@@ -7,6 +7,12 @@
             <xpath expr="//field[@name='function']" position="before">
                 <field name="status" widget="radio" options="{'horizontal': true}" string="Status"/>
             </xpath>
+            <xpath expr="//field[@name='is_company']" position="attributes">
+                <attribute name="invisible">context.get('hide_company_field', False)</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="invisible">context.get('hide_company_field', False)</attribute>
+            </xpath>
         </field>
     </record>
 

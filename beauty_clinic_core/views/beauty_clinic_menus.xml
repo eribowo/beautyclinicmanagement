@@ -12,6 +12,7 @@
         <field name="view_mode">kanban,tree,form</field>
         <field name="domain">[('status', '=', 'patient')]</field> <!-- Filter hanya pasien -->
         <field name="context">{'default_status': 'patient'}</field> <!-- Set default value untuk status -->
+        <field name="context">{'default_status': 'patient', 'hide_company_field': True}</field> <!-- Set context khusus -->
     </record>
 
     <!-- Menu untuk Patients -->
