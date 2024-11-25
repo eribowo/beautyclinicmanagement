@@ -15,7 +15,9 @@
         <field name="context">{'default_status': 'patient', 'hide_company_field': True}</field> <!-- Set context khusus -->
     </record>
 
-    <!-- Menu untuk Patients -->
+
+
+    <menuitem id="menu_beauty_clinic_root" name="Beauty Clinic" sequence="10"/>
     <menuitem id="menu_patient" name="Patients" parent="menu_beauty_clinic_root" sequence="20" action="action_patient"/>
 
     <!-- Menu Utama untuk Beauty Clinic -->
